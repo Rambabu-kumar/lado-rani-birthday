@@ -62,6 +62,7 @@ button, input { font: inherit; }
 .button.secondary { background: rgba(255,255,255,0.8); color: var(--rose-deep); border: 1px solid rgba(255,93,143,0.2); }
 .more-memory-button { display: flex; width: fit-content; margin: 32px auto 0; }
 .hero-photo { width: 100%; height: 460px; object-fit: cover; object-position: center 32%; }
+.page-nav { display: none; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .card-image { border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); }
