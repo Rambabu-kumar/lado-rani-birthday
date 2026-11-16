@@ -1,0 +1,52 @@
+
+.gallery-page .gallery-input { width: 100%; max-width: 360px; margin: 14px 0; padding: 0.92rem 1rem; border-radius: 12px; border: 1px solid rgba(255, 157, 183, 0.4); }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.photo-card { background: rgba(255,255,255,0.7); border-radius: 18px; overflow: hidden; box-shadow: 0 18px 30px rgba(178, 92, 122, 0.12); }
+.photo-card img { width: 100%; height: 220px; object-fit: cover; }
+.memories-page .memory-header { max-width: 720px; margin: 0 auto 28px; text-align: center; }
+.memory-eyebrow { display: inline-block; margin-bottom: 10px; padding: 7px 13px; border: 1px solid rgba(217, 66, 113, 0.18); border-radius: 999px; background: rgba(255, 255, 255, 0.62); color: var(--rose-deep); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; }
+.memories-page .section-title { margin-bottom: 10px; }
+.memory-intro { max-width: 590px; margin: 0 auto; color: var(--muted); line-height: 1.7; }
+.memory-viewer { width: min(100%, 820px); margin: 0 auto; }
+.memory-stage { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); height: clamp(420px, 68vh, 680px); padding: 20px; overflow: hidden; isolation: isolate; border: 1px solid rgba(255, 255, 255, 0.82); border-radius: 30px; background: radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.95), transparent 30%), radial-gradient(circle at 88% 82%, rgba(255, 197, 219, 0.66), transparent 34%), linear-gradient(135deg, #ffe8f0, #f3eaff 58%, #fff1e8); box-shadow: 0 24px 60px rgba(139, 87, 112, 0.16); }
+.memory-stage::before, .memory-stage::after { position: absolute; z-index: -1; color: rgba(217, 66, 113, 0.16); font-family: Georgia, 'Times New Roman', serif; pointer-events: none; }
+.memory-stage::before { content: "♡"; top: 16px; left: 24px; font-size: 5rem; transform: rotate(-15deg); }
+.memory-stage::after { content: "♡"; right: 24px; bottom: 8px; font-size: 6rem; transform: rotate(12deg); }
+.memory-stage .memory-card { grid-area: 1 / 1; display: flex; width: 100%; height: 100%; min-width: 0; min-height: 0; align-items: center; justify-content: center; padding: 14px; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
+.memory-stage .memory-card img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; border: 8px solid rgba(255, 255, 255, 0.94); border-radius: 20px; object-fit: contain; box-shadow: 0 18px 42px rgba(94, 55, 75, 0.24); cursor: zoom-in; animation: memory-arrive 0.35s ease both; }
+.memory-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 18px; margin-top: 20px; }
+.memory-control { min-width: 126px; }
+.memory-meta { min-width: 0; text-align: center; }
+.memory-caption { margin: 0 0 6px; color: var(--text); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1rem, 2.2vw, 1.25rem); }
+.memory-count { color: var(--rose-deep); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.14em; }
+.memory-progress { height: 6px; margin-top: 18px; overflow: hidden; border-radius: 999px; background: rgba(217, 66, 113, 0.12); }
+.memory-progress span { display: block; width: 8.33%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--rose), #c5a4ff); transition: width 0.3s ease; }
+.memory-hint { margin: 16px auto 0; color: var(--muted); font-size: 0.9rem; text-align: center; }
+@keyframes memory-arrive { from { opacity: 0.55; transform: scale(0.985); } to { opacity: 1; transform: scale(1); } }
+.birthday-page { background-image: linear-gradient(135deg, rgba(4, 10, 34, 0.68), rgba(7, 15, 54, 0.58)), url("../assets/images/birthday-background.png"); background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+.birthday-page .birthday-content { max-width: 900px; margin: 8px auto 0; padding: clamp(24px, 5vw, 48px); border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 32px; background: rgba(5, 12, 40, 0.52); box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3); backdrop-filter: blur(8px); text-align: center; position: relative; z-index: 2; }
+.birthday-page .section-title { color: #fff; text-shadow: 0 3px 22px rgba(0, 0, 0, 0.55); }
+.birthday-page .birthday-intro { max-width: 760px; margin: 0 auto 18px; color: #f3efff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
+.birthday-page .cake-art { filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.34)); }
+.birthday-page .birthday-wish { max-width: 760px; margin: 20px auto 0; padding: 20px; background: rgba(255, 255, 255, 0.92); }
+.birthday-page .birthday-wish .subtitle { margin: 0; color: var(--muted); text-shadow: none; }
+@media (max-width: 600px) {
+  .memory-stage { height: clamp(360px, 60vh, 520px); padding: 10px; border-radius: 22px; }
+  .memory-stage .memory-card { padding: 8px; }
+  .memory-stage .memory-card img { border-width: 5px; border-radius: 16px; }
+  .memory-controls { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .memory-meta { grid-column: 1 / -1; grid-row: 1; }
+  .memory-control { min-width: 0; width: 100%; padding: 0.8rem 0.6rem; }
+}
+@media (max-width: 768px) {
+  .birthday-page { background-attachment: scroll; }
+  .birthday-page .birthday-content { padding: 24px 18px; border-radius: 24px; }
+}
+.first-meet-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.first-meet-videos video { display: block; width: 100%; border-radius: 18px; box-shadow: var(--shadow); }
+.gallery-page .lock-state { text-align: center; }
+.gallery-page .lock-box { max-width: 480px; margin: 0 auto; padding: 34px 28px; }
+.gallery-page .shake { animation: shake 0.45s ease-in-out; }
+.gallery-page .category-section { margin-top: 30px; }
+.gallery-page .category-title { margin: 0 0 16px; color: var(--rose-deep); }
+.lightbox-caption { background: rgba(255,255,255,0.8); padding: 14px 18px; color: var(--muted); }
